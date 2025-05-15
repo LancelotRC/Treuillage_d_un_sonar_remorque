@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05806207-ddd8-4eac-b09d-bfc0677aa7a4" name="Changes" comment="création" />
+    <list default="true" id="05806207-ddd8-4eac-b09d-bfc0677aa7a4" name="Changes" comment="création">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,18 +27,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LancelotRC"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LancelotRC&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LancelotRC/Treuillage_d_un_sonar_remorque",
-    "accountId": "2aa7aab7-ac0e-47af-aa27-fada7786a599"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LancelotRC/Treuillage_d_un_sonar_remorque&quot;,
+    &quot;accountId&quot;: &quot;2aa7aab7-ac0e-47af-aa27-fada7786a599&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -54,6 +56,7 @@
     "LaTeX.Tableau_Avancement.executor": "Run",
     "Python.Déformée du cable.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/lalol/OneDrive/Documents/Scolaire/1A ENSTA B/UE2.2-Projet Decouverte des systèmes/Treuillage_d_un_sonar_remorque",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -87,6 +90,7 @@
       <workItem from="1746620778231" duration="6859000" />
       <workItem from="1746627988640" duration="1300000" />
       <workItem from="1747290329299" duration="5755000" />
+      <workItem from="1747296229467" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="création">
       <option name="closed" value="true" />
@@ -104,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747295886679</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="création">
+      <option name="closed" value="true" />
+      <created>1747296268318</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747296268318</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
