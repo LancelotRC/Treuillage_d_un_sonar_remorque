@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05806207-ddd8-4eac-b09d-bfc0677aa7a4" name="Changes" comment="création">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="ad0ad13a-6aad-451a-aa7f-880f8961f828" name="Changes" comment="création">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,33 +34,27 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2wldk01q9FI9dRo5AugAF2n1cMX" />
+  <component name="ProjectId" id="2x7kaJwB0B1HZfmT2PA1VEOgH8e" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "LaTeX.Avancement_du_projet.executor": "Run",
-    "LaTeX.Fichier_avancement.executor": "Run",
-    "LaTeX.Rapport.executor": "Run",
-    "LaTeX.Tableau_Avancement.executor": "Run",
-    "Python.Déformée du cable.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/lalol/OneDrive/Documents/Scolaire/1A ENSTA B/UE2.2-Projet Decouverte des systèmes/Treuillage_d_un_sonar_remorque",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "texify.conventions",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main__bis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,45 +66,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="05806207-ddd8-4eac-b09d-bfc0677aa7a4" name="Changes" comment="" />
-      <created>1746620233914</created>
+      <changelist id="ad0ad13a-6aad-451a-aa7f-880f8961f828" name="Changes" comment="création" />
+      <created>1747296561752</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746620233914</updated>
-      <workItem from="1746620234942" duration="7000" />
-      <workItem from="1746620249475" duration="53000" />
-      <workItem from="1746620312140" duration="295000" />
-      <workItem from="1746620705229" duration="38000" />
-      <workItem from="1746620778231" duration="6859000" />
-      <workItem from="1746627988640" duration="1300000" />
-      <workItem from="1747290329299" duration="5755000" />
-      <workItem from="1747296229467" duration="55000" />
+      <updated>1747296561752</updated>
+      <workItem from="1747296562809" duration="168000" />
+      <workItem from="1747297151663" duration="5000" />
     </task>
-    <task id="LOCAL-00001" summary="création">
-      <option name="closed" value="true" />
-      <created>1747295702027</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1747295702027</updated>
-    </task>
-    <task id="LOCAL-00002" summary="création">
-      <option name="closed" value="true" />
-      <created>1747295886679</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1747295886679</updated>
-    </task>
-    <task id="LOCAL-00003" summary="création">
-      <option name="closed" value="true" />
-      <created>1747296268318</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1747296268318</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,8 +82,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="création" />
     <option name="LAST_COMMIT_MESSAGE" value="création" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Treuillage_d_un_sonar_remorque$Déformée_du_cable.coverage" NAME="Déformée du cable Coverage Results" MODIFIED="1747290800617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

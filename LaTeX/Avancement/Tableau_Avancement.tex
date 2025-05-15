@@ -1,0 +1,145 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+
+\geometry{margin=2.5cm}
+
+\title{Suivi des objectifs -- Projet Treuillage Sonar Remorqué 2025}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Tableau de suivi}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{7.5cm}|>{\centering\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Objectif} & \textbf{État d'avancement} & \textbf{Responsable(s)} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{2. Exploitation des données recueillies}} & Résponsable \\
+\hline
+Comprendre le fonctionnement du sonar latéral et interpréter les images acquises & Non commencé &  \\
+\hline
+Associer les images du sonar à une localisation géographique précise & Non commencé &  \\
+\hline
+Identifier les sources d’erreurs dans les mesures et les données collectées & Non commencé &  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{3. Modélisation de la déformée du câble de remorquage}} & Ewen + Lancelot\\
+\hline
+Modéliser la déformée du câble de remorquage (layback) & Non commencé &  \\
+\hline
+Estimer la position réelle du sonar à partir des données de navigation du navire et du modèle de câble & Non commencé &  \\
+\hline
+Modéliser les efforts hydrodynamiques appliqués au câble et au sonar & Commencé & Ewen \\
+\hline
+Valider la pertinence du modèle retenu (comparaison, sensibilité, simulations) & Non commencé &  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{4. Conception d’un support de treuil de mise à la mer}} & Stassen\\
+\hline
+Exprimer le besoin technique et les contraintes d’intégration sur le navire & Non commencé &  \\
+\hline
+Concevoir une solution mécanique de treuillage à installer sur le navire (support motorisé) & Non commencé &  \\
+\hline
+Concevoir un tambour permettant l'enroulement et le déroulement efficaces du câble & Non commencé &  \\
+\hline
+Étudier et concevoir un système de trancannage si nécessaire pour préserver le câble & Non commencé &  \\
+\hline
+Garantir la protection du câble lors de sa mise à la mer & Non commencé &  \\
+\hline
+Assurer la compatibilité de l'ensemble du système avec le navire La Mélité & Non commencé &  \\
+\hline
+\end{longtable}
+
+\section*{Légende}
+\begin{itemize}[label=\textbullet]
+  \item \textbf{Non commencé} : aucune tâche engagée
+  \item \textbf{En cours} : des éléments en discussion ou conception
+  \item \textbf{Terminé} : tâche finalisée et validée
+\end{itemize}
+
+\newpage
+
+\section*{Détail des objectifs}
+
+\subsection*{1. Comprendre le fonctionnement du sonar latéral et interpréter les images acquises}
+Cette tâche consiste à :
+\begin{itemize}
+  \item Étudier le principe physique du sonar latéral (propagation, retour d’onde, angle d’émission, résolution).
+  \item Se familiariser avec les types d’images produites (zones d’ombres, texture, intensité de retour).
+  \item Identifier les objets caractéristiques sur les images (épaves, rochers, câbles, etc.).
+\end{itemize}
+
+\subsection*{2. Associer les images du sonar à une localisation géographique précise}
+Cette tâche comprend :
+\begin{itemize}
+  \item L’analyse du format des données de navigation (GPS, cap, vitesse).
+  \item Le calage spatial entre l’image acquise et la position du sonar.
+  \item L’établissement d’une cartographie des images géolocalisées.
+\end{itemize}
+
+\subsection*{3. Modéliser la déformée du câble de remorquage (layback)}
+Il s’agit ici de :
+\begin{itemize}
+  \item Étudier les modèles de catenaires et les lois de traction d’un câble dans l’eau.
+  \item Prendre en compte les effets de traînée, de flottabilité et de vitesse du navire.
+  \item Déduire la forme du câble et la position probable du sonar sous l’eau.
+\end{itemize}
+
+\subsection*{4. Estimer la position réelle du sonar à partir des données de navigation du navire}
+Objectifs :
+\begin{itemize}
+  \item Intégrer les données de navigation avec le modèle du câble.
+  \item Calculer le "layback" (décalage horizontal entre navire et sonar).
+  \item Simuler ou valider cette estimation avec des cas tests.
+\end{itemize}
+
+\subsection*{5. Concevoir une solution mécanique de treuillage à installer sur le navire}
+Il faut ici :
+\begin{itemize}
+  \item Identifier les contraintes mécaniques et spatiales sur le navire La Mélité.
+  \item Concevoir une structure stable et résistante pour fixer le treuil.
+  \item Choisir un moteur adapté au câble, à la tension, et aux efforts en jeu.
+\end{itemize}
+
+\subsection*{6. Concevoir un tambour permettant l'enroulement et le déroulement efficaces du câble}
+Cette tâche vise à :
+\begin{itemize}
+  \item Définir le diamètre, la capacité, et la vitesse d’enroulement du tambour.
+  \item Garantir un guidage régulier du câble.
+  \item Prévoir la fixation au moteur ou à la transmission.
+\end{itemize}
+
+\subsection*{7. Étudier et concevoir un système de trancannage si nécessaire}
+Le trancannage permet :
+\begin{itemize}
+  \item D’éviter l’accumulation désordonnée du câble sur le tambour.
+  \item De guider le câble latéralement au fur et à mesure de son enroulement.
+  \item Il peut être mécanique, motorisé ou synchronisé avec la rotation.
+\end{itemize}
+
+\subsection*{8. Garantir la protection du câble lors de sa mise à la mer}
+Objectifs :
+\begin{itemize}
+  \item Étudier les risques d’usure ou d’arrachement du câble.
+  \item Concevoir un guide-câble ou une rampe de lancement.
+  \item Minimiser les chocs et les frictions sur le bateau.
+\end{itemize}
+
+\subsection*{9. Assurer la compatibilité du système avec le navire La Mélité}
+Il faudra :
+\begin{itemize}
+  \item Relever les dimensions, emplacements disponibles et interfaces du navire.
+  \item Vérifier la tenue mécanique du système.
+  \item S’assurer que le fonctionnement n’interfère pas avec les manœuvres marines.
+\end{itemize}
+
+\end{document}
