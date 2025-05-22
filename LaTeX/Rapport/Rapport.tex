@@ -1,375 +1,167 @@
-
 \documentclass[12pt,a4paper]{article}
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Packages
-
-
 %----------------------------------------
-
 
 \usepackage[utf8]{inputenc}
-
-
 \usepackage[T1]{fontenc}
-
-
 \usepackage[french]{babel}
-
-
 \usepackage{graphicx}
-
-
 \usepackage{amsmath,amsfonts,amssymb}
-
-
 \usepackage{geometry}
-
-
 \usepackage{hyperref}
-
-
 \usepackage{caption}
-
-
 \usepackage{subcaption}
-
-
 \usepackage{float}
-
-
 \usepackage{enumitem}
-
-
 \usepackage{fancyhdr}
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Mise en page
-
-
 %----------------------------------------
-
 
 \geometry{margin=2.5cm}
-
-
 \pagestyle{fancy}
-
-
 \fancyhf{}
-
-
 \rhead{\thepage}
-
-
 \lhead{Projet UE 2.2 - Treuillage sonar remorqué}
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Titre
-
-
 %----------------------------------------
-
 
 \title{\textbf{Rapport de Projet} \\
-
-
 \vspace{0.3cm}
-
-
 \large Treuillage d’un Sonar Latéral Remorqué}
-
-
 \author{Nom Prénom \\
-
-
 École / Université \\
-
-
 Encadrants : Nom(s)}
-
-
 \date{\today}
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Début du document
-
-
 %----------------------------------------
-
 
 \begin{document}
 
-
-
-
-
-
 \maketitle
-
 
 \tableofcontents
 
-
 \newpage
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Introduction
-
-
 %----------------------------------------
-
-
 \section{Introduction}
-
 
 % Présentation du contexte, des enjeux du projet, de l’organisation du travail.
 
+Les sonars latéraux sont largement utilisés pour détecter la présence d’objets posés sur les fonds marins.
+Ils sont montés sur des « poissons » remorqués, immergés à faible distance du fond afin de bénéficier d’une bonne rasance.
+Ce mode de détection permet de repérer les objets par leur « ombre acoustique », formée par la réflexion des ondes sonores sur ces derniers.
 
 
+Cependant, plusieurs défis techniques doivent être relevés pour une mise en œuvre efficace.
+L’un des principaux est le positionnement du sonar : les données recueillies sont géo-référencées à partir de la
+position GPS du navire, alors que le sonar est décalé horizontalement vers l’arrière. Il est donc nécessaire d’estimer
+cette distance, appelée « layback », pour corriger le positionnement. Cela peut être réalisé soit expérimentalement,
+soit par modélisation de la déformée du câble de remorquage.
 
 
-
-
-
-
-
-Les sonars latéraux sont largement utilisés pour détecter la présence d’objets posés sur les fonds marins. Ils sont montés sur des « poissons » remorqués, immergés à faible distance du fond afin de bénéficier d’une bonne rasance. Ce mode de détection permet de repérer les objets par leur « ombre acoustique », formée par la réflexion des ondes sonores sur ces derniers.
-
-
-
-
-
-
-Cependant, plusieurs défis techniques doivent être relevés pour une mise en œuvre efficace. L’un des principaux est le positionnement du sonar : les données recueillies sont géo-référencées à partir de la position GPS du navire, alors que le sonar est décalé horizontalement vers l’arrière. Il est donc nécessaire d’estimer cette distance, appelée « layback », pour corriger le positionnement. Cela peut être réalisé soit expérimentalement, soit par modélisation de la déformée du câble de remorquage.
-
-
-
-
-
-
-Par ailleurs, la mise à l’eau du sonar repose actuellement sur un touret manuel, peu pratique à utiliser. L’objectif du projet est donc double : modéliser la déformée du câble pour estimer le layback, et concevoir un support pour un treuil motorisé, permettant de faciliter et d’automatiser la mise à la mer du sonar:contentReference[oaicite:0]{index=0}.
-
-
-
-
-
-
-
-
-
-
-
-
-
+Par ailleurs, la mise à l’eau du sonar repose actuellement sur un touret manuel, peu pratique à utiliser.
+L’objectif du projet est donc double : modéliser la déformée du câble pour estimer le layback,
+et concevoir un support pour un treuil motorisé, permettant de faciliter et d’automatiser la mise à la mer du
+sonar:contentReference[oaicite:0]{index=0}.
 
 %----------------------------------------
-
-
 % Cahier des charges
-
-
 %----------------------------------------
-
 
 \section{Analyse du cahier des charges}
 
-
 % Reprise des objectifs fonctionnels et contraintes techniques.
-
-
-
-
-
 
 \subsection{Objectifs fonctionnels}
 
 
-
-
-
-
 Les objectifs principaux du projet sont les suivants :
-
 
 \begin{itemize}
 
-
   \item Permettre la mise à l’eau et la récupération du sonar grâce à un treuil motorisé ;
-
-
-  \item Estimer la déformée du câble afin de corriger le positionnement géographique des mesures du sonar (calcul du layback) ;
-
-
+  \item Estimer la déformée du câble afin de corriger le positionnement géographique des mesures du sonar
+  (calcul du layback) ;
   \item Étudier les efforts mécaniques subis par le câble et le point d’ancrage ;
-
-
   \item Concevoir une structure de support pour le treuil adaptée à l’environnement du navire « Mélité » ;
-
-
   \item Proposer une solution éventuellement évolutive vers un système automatique de régulation de profondeur du sonar.
 
-
 \end{itemize}
-
-
-
-
 
 
 \subsection{Contraintes techniques}
 
 
-
-
-
-
 Le cahier des charges impose plusieurs contraintes à respecter :
 
-
 \begin{itemize}
-
-
   \item Le treuil doit permettre l’enroulement homogène de 50 m de câble électroporteur ;
-
-
   \item Il doit supporter une tension en pointe d’au moins 1500~N, voire 2000~N en cas d’accrochage du sonar ;
-
-
-  \item La structure de support devra être compatible avec les platines latérales présentes sur la plage arrière de la « Mélité » ;
-
-
+  \item La structure de support devra être compatible avec les platines latérales présentes sur la plage arrière de la
+  « Mélité » ;
   \item Le support devra être suffisamment robuste et ne pas interférer avec les autres équipements du navire ;
-
-
-  \item Le projet doit être mené en mode collaboratif, avec une démarche rigoureuse de conception (analyse fonctionnelle, modélisation, maquette numérique, choix des matériaux).
-
+  \item Le projet doit être mené en mode collaboratif, avec une démarche rigoureuse de conception
+  (analyse fonctionnelle, modélisation, maquette numérique, choix des matériaux).
 
 \end{itemize}
 
 
-
-
-
-
-Une tâche complémentaire optionnelle consiste à concevoir un système de trancannage pour assurer un enroulement optimal du câble:contentReference[oaicite:1]{index=1}.
-
-
-
-
-
-
-
+Une tâche complémentaire optionnelle consiste à concevoir un système de trancannage pour assurer un enroulement
+optimal du câble:contentReference[oaicite:1]{index=1}.
 
 
 
 %----------------------------------------
-
-
 % Étude théorique
-
-
 %----------------------------------------
-
 
 \section{Modélisation du système et estimation de la position du sonar}
 
 
+Pour receuillir des données du sonar, il est nécéssaire d'en connaitre sa position. En effet, si le bateau tracteur
+peut être géolocaliser par GPS, ce n'est pas le cas du sonar car les ondes électromagnétiques ne traversent pas l'eau.
 
-
-
-
-Pour receuillir des données du sonar, il est nécéssaire d'en connaitre sa position. En effet, si le bateau tracteur peut être géolocaliser par GPS, ce n'est pas le cas du sonar car les ondes électromagnétiques ne traversent pas l'eau.
-
-
-Une solution enviseagable est d'estimer la déformée du cable à partir des efforts subis par le système. On pourra alors, estimer le layback du sonar.
-
+Une solution enviseagable est d'estimer la déformée du cable à partir des efforts subis par le système.
+On pourra alors, estimer le layback du sonar.
 
 \subsection{Démarche}
 
-
 \begin{itemize}
 
-
   \item Déterminer les efforts sur le bout du cable en isolant le sonar.
-
-
   \item Discrétiser le cable en n éléments indéformables
-
-
   \item Détermination de l'inclinaison du premier segment de cable par rapport au deuxième
-
-
   \item Itération sur les tous les étéments restants
-
-
   \item Estimation du layback
 
 
 \end{itemize}
 
 
-
-
-
-
 \subsection{Données paramètres et hypothèses de travail}
 
-
 Hypothèses:
-
-
   \item  Cable pesant, flottant et non élastique
 
-
 Données d'entrées:
+\begin{itemize}
+  \item Vitesse du bateau: 4 nœuds soit 2,05 m/s
+  \item Diamètre du cable: 6,3 mm
+  \item Longueur du cable: 50 m
+  \item Mer(à 15 °C): Masse Volumique: 1025 kg/m^3    Viscosité dynamique: 1,22E-3 Pl
+\end{itemize}
 
-
-Vitesse du bateau: 4 nœuds soit 2,05 m/s
-
-
-Diamètre du cable: 6,3 mm
-
-
-Longueur du cable: 50 m
-
-
-Mer(à 15 °C): Masse Volumique: 1025 kg/m^3    Viscosité dynamique: 1,22E-3 Pl
 
 
 \subsection{Modélisation des efforts hydrodynamiques}
@@ -378,185 +170,97 @@ Mer(à 15 °C): Masse Volumique: 1025 kg/m^3    Viscosité dynamique: 1,22E-3 Pl
 \subsubsection{Isolement du sonar}
 
 
-Dans le référentiel terrestre supposé galiléen, nous supposerons le sonar en translation rectiligne uniforme.On considère la force de pesanteur, la pensée d'archimère, la trainée et les frottements du à l'eau, ainsi que la force du cable sur le sonar comme l'ensemble des forces s'appliquant sur le système.
+Dans le référentiel terrestre supposé galiléen, nous supposerons le sonar en translation rectiligne uniforme.
+On considère la force de pesanteur, la pensée d'archimère, la trainée et les frottements du à l'eau,
+ainsi que la force du cable sur le sonar comme l'ensemble des forces s'appliquant sur le système.
 
 
 Dimension du sonar:
-
-
-Longueur: 830 mm
-
-
-Diamètre: 60 m
+    Longueur: 830 mm
+    Diamètre: 60 m
 
 
 \subsubsection{Isolement du cable}
-
 
 \subsection{Résultats et Validation du modèle}
 
 
 Grâce au code python disponible en annexe ( X ), nous avons obtenus ces résulats:
 
-
 Layback (à 4 nœuds): X m
-
-
 Profondeur (à 4 nœuds): X m
 
-
-Si les ordres de grandeurs semblent être respectés, on constate tout de même une différences de plusieurs mêtres. De tel écart pouvent sembler être mineur mais sont en réalité important lorsqu'on parle de récif dans un port par exemple.
-
+Si les ordres de grandeurs semblent être respectés, on constate tout de même une différences de plusieurs mêtres,
+allant jusqu'à près de 20\% dans les cas les plus critiques.
+De tel écart pouvent sembler être mineur mais sont en réalité important lorsqu'on parle de récif dans un port par exemple.
 
 On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
 
-
 \item Constantes d'entrée différentes & incertitude
-
-
 \item Calculs de trainées plus possibles
-
-
-
-
 
 
 % Diagrammes, équations, modélisations nécessaires.
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Choix de conception
-
-
 %----------------------------------------
 
 
 \section{Choix techniques et conception}
 
-
 \subsection{Architecture retenue}
-
-
 \subsection{Choix des composants}
-
-
 \subsection{Calculs associés}
 
 
 
-
-
-
 %----------------------------------------
-
-
 % Simulation et validation
-
-
 %----------------------------------------
 
 
 \section{Simulation et validation}
 
-
 \subsection{Hypothèses de simulation}
-
-
 \subsection{Résultats obtenus}
-
-
 \subsection{Analyse critique}
 
 
-
-
-
-
 %----------------------------------------
-
-
 % Bilan et perspectives
-
-
 %----------------------------------------
-
 
 \section{Conclusion et perspectives}
-
 
 % Synthèse du projet, limites, pistes d’amélioration.
 
 
-
-
-
-
 %----------------------------------------
-
-
 % Annexes
-
-
 %----------------------------------------
 
 
 \appendix
 
-
 \section{Annexe 1 : Données techniques}
-
-
 \section{Annexe 2 : Codes ou algorithmes utilisés}
 
-
-
-
-
-
 %----------------------------------------
-
-
 % Bibliographie
-
-
 %----------------------------------------
-
 
 \begin{thebibliography}{9}
 
-
 \bibitem{doc1}
-
-
 Titre du document, Auteur, Année.
 
 
-
-
-
-
 \bibitem{doc2}
-
-
 Titre ou site, consulté le jj/mm/aaaa.
 
 
 \end{thebibliography}
 
-
-
-
-
-
 \end{document}
-
-
-
-
 
