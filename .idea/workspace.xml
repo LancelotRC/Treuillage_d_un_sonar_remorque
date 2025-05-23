@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad0ad13a-6aad-451a-aa7f-880f8961f828" name="Changes" comment="mise à jour du rapport par Ewen + mise en page du .tex">
+    <list default="true" id="ad0ad13a-6aad-451a-aa7f-880f8961f828" name="Changes" comment="embellissement rapport (Page de garde propre + figures encore à ajuster)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Déformée du cable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Déformée du cable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/Rapport/Rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Rapport/Rapport.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/Rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/Rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/Rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxil/Rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Rapport.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Rapport.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Rapport.synctex.gz.sum.synctex" beforeDir="false" afterPath="$PROJECT_DIR$/out/Rapport.synctex.gz.sum.synctex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Avancement/Tableau_Avancement.tex" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Avancement/Tableau_Avancement.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Rapport/Rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Rapport/Rapport.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/Tableau_Avancement.aux" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Tableau_Avancement.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/Tableau_Avancement.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Tableau_Avancement.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Tableau_Avancement.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Tableau_Avancement.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Tableau_Avancement.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/Tableau_Avancement.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Tableau_Avancement.synctex.gz.sum.synctex" beforeDir="false" afterPath="$PROJECT_DIR$/out/Tableau_Avancement.synctex.gz.sum.synctex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;LaTeX.Rapport.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Déformée du cable.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "LaTeX.Rapport.executor": "Run",
+    "LaTeX.Tableau_Avancement.executor": "Run",
+    "Python.Déformée du cable.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="main_bis" />
@@ -101,7 +100,8 @@
       <workItem from="1747936271620" duration="2230000" />
       <workItem from="1747938742838" duration="7024000" />
       <workItem from="1748003346959" duration="817000" />
-      <workItem from="1748004185841" duration="402000" />
+      <workItem from="1748004185841" duration="767000" />
+      <workItem from="1748005170760" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="création">
       <option name="closed" value="true" />
@@ -135,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747930879965</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="embellissement rapport (Page de garde propre + figures encore à ajuster)">
+      <option name="closed" value="true" />
+      <created>1748004948604</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748004948604</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +154,8 @@
     <MESSAGE value="complétion et validation du code à quelques expressions prêt" />
     <MESSAGE value="Code complet et conforme aux suppositions. On trace les layback et les profondeurs relatives à l'erreur pour toutes les longueurs et toutes les vitesses et on compare aux réferences. Reste à ajuster, les valeurs relatives semblent incohérentes (hors reference)" />
     <MESSAGE value="mise à jour du rapport par Ewen + mise en page du .tex" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise à jour du rapport par Ewen + mise en page du .tex" />
+    <MESSAGE value="embellissement rapport (Page de garde propre + figures encore à ajuster)" />
+    <option name="LAST_COMMIT_MESSAGE" value="embellissement rapport (Page de garde propre + figures encore à ajuster)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Treuillage_d_un_sonar_remorque$Déformée_du_cable.coverage" NAME="Déformée du cable Coverage Results" MODIFIED="1747936731069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

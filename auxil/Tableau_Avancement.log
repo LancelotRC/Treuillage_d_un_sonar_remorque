@@ -1,31 +1,31 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  15 MAY 2025 08:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.22)  23 MAY 2025 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **./Tableau_Avancement.tex
 (Tableau_Avancement.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-14>
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
-File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\c@part=\count272
+\c@section=\count273
+\c@subsection=\count274
+\c@subsubsection=\count275
+\c@paragraph=\count276
+\c@subparagraph=\count277
+\c@figure=\count278
+\c@table=\count279
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen146
 )
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
+Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
@@ -33,14 +33,15 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2024/01/07 v24.1 The Babel package
-\babel@savecnt=\count195
-\U@D=\dimen141
+Package: babel 2025/04/29 v25.8 The multilingual framework for pdfLaTeX, LuaLaT
+eX and XeLaTeX
+\babel@savecnt=\count280
+\U@D=\dimen147
 \l@unhyphenated=\language79
 
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count196
+\bbl@dirlevel=\count281
 
 *************************************
 * Local config file bblopts.cfg used
@@ -52,37 +53,38 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french.l
 df
 Language: french 2024-07-25 v3.6c French support from the babel system
-Package babel Info: Hyphen rules for 'acadian' set to \l@french
-(babel)             (\language22). Reported on input line 91.
-Package babel Info: Hyphen rules for 'canadien' set to \l@french
-(babel)             (\language22). Reported on input line 92.
-\FB@stdchar=\count197
-Package babel Info: Making : an active character on input line 421.
-Package babel Info: Making ; an active character on input line 422.
-Package babel Info: Making ! an active character on input line 423.
-Package babel Info: Making ? an active character on input line 424.
-\FBguill@level=\count198
-\FBold@everypar=\toks19
-\FB@Mht=\dimen142
-\mc@charclass=\count199
-\mc@charfam=\count266
-\mc@charslot=\count267
-\std@mcc=\count268
-\dec@mcc=\count269
-\FB@parskip=\dimen143
-\listindentFB=\dimen144
-\descindentFB=\dimen145
-\labelindentFB=\dimen146
-\labelwidthFB=\dimen147
-\leftmarginFB=\dimen148
-\parindentFFN=\dimen149
-\FBfnindent=\dimen150
-))
+
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel
 -french.tex
 Package babel Info: Importing font and identification data for french
 (babel)             from babel-fr.ini. Reported on input line 11.
 )
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language22). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language22). Reported on input line 92.
+\FB@stdchar=\count282
+Package babel Info: Making : an active character on input line 421.
+Package babel Info: Making ; an active character on input line 422.
+Package babel Info: Making ! an active character on input line 423.
+Package babel Info: Making ? an active character on input line 424.
+\FBguill@level=\count283
+\FBold@everypar=\toks19
+\FB@Mht=\dimen148
+\mc@charclass=\count284
+\mc@charfam=\count285
+\mc@charslot=\count286
+\std@mcc=\count287
+\dec@mcc=\count288
+\FB@parskip=\dimen149
+\listindentFB=\dimen150
+\descindentFB=\dimen151
+\labelindentFB=\dimen152
+\labelwidthFB=\dimen153
+\leftmarginFB=\dimen154
+\parindentFFN=\dimen155
+\FBfnindent=\dimen156
+))
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -95,30 +97,30 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count270
-\Gm@cntv=\count271
-\c@Gm@tempcnt=\count272
-\Gm@bindingoffset=\dimen151
-\Gm@wd@mp=\dimen152
-\Gm@odd@mp=\dimen153
-\Gm@even@mp=\dimen154
-\Gm@layoutwidth=\dimen155
-\Gm@layoutheight=\dimen156
-\Gm@layouthoffset=\dimen157
-\Gm@layoutvoffset=\dimen158
+\Gm@cnth=\count289
+\Gm@cntv=\count290
+\c@Gm@tempcnt=\count291
+\Gm@bindingoffset=\dimen157
+\Gm@wd@mp=\dimen158
+\Gm@odd@mp=\dimen159
+\Gm@even@mp=\dimen160
+\Gm@layoutwidth=\dimen161
+\Gm@layoutheight=\dimen162
+\Gm@layouthoffset=\dimen163
+\Gm@layoutvoffset=\dimen164
 \Gm@dimlist=\toks21
 
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip50
-\enit@outerparindent=\dimen159
+\labelindent=\skip51
+\enit@outerparindent=\dimen165
 \enit@toks=\toks22
-\enit@inbox=\box51
-\enit@count@id=\count273
-\enitdp@description=\count274
+\enit@inbox=\box53
+\enit@count@id=\count292
+\enitdp@description=\count293
 )
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
@@ -129,7 +131,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 )
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
@@ -142,42 +144,44 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen160
-\ar@mcellbox=\box52
-\extrarowheight=\dimen161
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen166
+\ar@mcellbox=\box54
+\extrarowheight=\dimen167
 \NC@list=\toks23
-\extratabsurround=\skip51
-\backup@length=\skip52
-\ar@cellbox=\box53
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box55
 )
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
-\LTleft=\skip53
-\LTright=\skip54
-\LTpre=\skip55
-\LTpost=\skip56
-\LTchunksize=\count275
-\LTcapwidth=\dimen162
-\LT@head=\box54
-\LT@firsthead=\box55
-\LT@foot=\box56
-\LT@lastfoot=\box57
-\LT@gbox=\box58
-\LT@cols=\count276
-\LT@rows=\count277
-\c@LT@tables=\count278
-\c@LT@chunks=\count279
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count294
+\LTcapwidth=\dimen168
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count295
+\LT@rows=\count296
+\c@LT@tables=\count297
+\c@LT@chunks=\count298
 \LT@p@ftn=\toks24
 )
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count280
-\l__pdf_internal_box=\box59
+File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count299
 )
 (C:/Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-Projet Decouverte 
-des systèmes\Treuillage_d_un_sonar_remorque\auxil\Tableau_Avancement.aux)
+des systèmes\Treuillage_d_un_sonar_remorque\auxil\Tableau_Avancement.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported  on input line 12.
+)
 \openout1 = `Tableau_Avancement.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -241,16 +245,16 @@ LaTeX Info: Redefining \up on input line 16.
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen163
-\scratchbox=\box60
-\nofMPsegments=\count282
-\nofMParguments=\count283
+\scratchcounter=\count300
+\scratchdimen=\dimen169
+\scratchbox=\box61
+\nofMPsegments=\count301
+\nofMParguments=\count302
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen164
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen170
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
 \everyMPtoPDFconversion=\toks26
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -263,25 +267,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
+
+
 [1
 
-{C:/Users/lalol/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] [4]
+{C:/Users/lalol/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+
+[2]
+
+[3]
+
+[4]
 (C:/Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-Projet Decouverte 
 des systèmes\Treuillage_d_un_sonar_remorque\auxil\Tableau_Avancement.aux)
  ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4706 strings out of 474486
- 80512 string characters out of 5743755
- 1944542 words of memory out of 5000000
- 26978 multiletter control sequences out of 15000+600000
- 566849 words of font info for 54 fonts, out of 8000000 for 9000
+ 4725 strings out of 470063
+ 80456 string characters out of 5478870
+ 498360 words of memory out of 5000000
+ 31398 multiletter control sequences out of 15000+600000
+ 633941 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,190b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,250b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\lalol\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx
 1200.pk> <C:\Users\lalol\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1095.pk> <C:\Users\lalol\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -291,9 +302,9 @@ pen/ec/dpi600\ecbx1095.pk> <C:\Users\lalol\AppData\Local\MiKTeX\fonts/pk/ljfour
 ljfour/jknappen/ec/dpi600\ecrm1728.pk>
 Output written on "C:/Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-
 Projet Decouverte des systèmes\Treuillage_d_un_sonar_remorque\out\Tableau_Avan
-cement.pdf" (4 pages, 79764 bytes).
+cement.pdf" (4 pages, 80762 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
+ 242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
