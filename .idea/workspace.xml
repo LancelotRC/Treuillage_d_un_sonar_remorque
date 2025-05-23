@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad0ad13a-6aad-451a-aa7f-880f8961f828" name="Changes" comment="Code complet et conforme aux suppositions. On trace les layback et les profondeurs relatives à l'erreur pour toutes les longueurs et toutes les vitesses et on compare aux réferences. Reste à ajuster, les valeurs relatives semblent incohérentes (hors reference)">
+    <list default="true" id="ad0ad13a-6aad-451a-aa7f-880f8961f828" name="Changes" comment="mise à jour du rapport par Ewen + mise en page du .tex">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Déformée du cable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Déformée du cable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Rapport/Rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Rapport/Rapport.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/Rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/Rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/Rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/Rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/Rapport.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Rapport.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Rapport.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Rapport.synctex.gz.sum.synctex" beforeDir="false" afterPath="$PROJECT_DIR$/out/Rapport.synctex.gz.sum.synctex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +52,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;LaTeX.Rapport.executor&quot;: &quot;Run&quot;,
     &quot;Python.Déformée du cable.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -60,6 +69,11 @@
     <force-push-targets>
       <force-push-target remote-path="origin" branch="main_bis" />
     </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-Projet Decouverte des systèmes\Treuillage_d_un_sonar_remorque\LaTeX\Rapport\logoENSTA" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -83,6 +97,11 @@
       <workItem from="1747395736261" duration="2306000" />
       <workItem from="1747398162062" duration="16640000" />
       <workItem from="1747923580465" duration="1945000" />
+      <workItem from="1747931613885" duration="2208000" />
+      <workItem from="1747936271620" duration="2230000" />
+      <workItem from="1747938742838" duration="7024000" />
+      <workItem from="1748003346959" duration="817000" />
+      <workItem from="1748004185841" duration="402000" />
     </task>
     <task id="LOCAL-00001" summary="création">
       <option name="closed" value="true" />
@@ -108,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747411376844</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mise à jour du rapport par Ewen + mise en page du .tex">
+      <option name="closed" value="true" />
+      <created>1747930879965</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747930879965</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,9 +145,10 @@
     <MESSAGE value="création" />
     <MESSAGE value="complétion et validation du code à quelques expressions prêt" />
     <MESSAGE value="Code complet et conforme aux suppositions. On trace les layback et les profondeurs relatives à l'erreur pour toutes les longueurs et toutes les vitesses et on compare aux réferences. Reste à ajuster, les valeurs relatives semblent incohérentes (hors reference)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code complet et conforme aux suppositions. On trace les layback et les profondeurs relatives à l'erreur pour toutes les longueurs et toutes les vitesses et on compare aux réferences. Reste à ajuster, les valeurs relatives semblent incohérentes (hors reference)" />
+    <MESSAGE value="mise à jour du rapport par Ewen + mise en page du .tex" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise à jour du rapport par Ewen + mise en page du .tex" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Treuillage_d_un_sonar_remorque$Déformée_du_cable.coverage" NAME="Déformée du cable Coverage Results" MODIFIED="1747923962947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Treuillage_d_un_sonar_remorque$Déformée_du_cable.coverage" NAME="Déformée du cable Coverage Results" MODIFIED="1747936731069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

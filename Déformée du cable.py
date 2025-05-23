@@ -178,11 +178,11 @@ def tracer_deformee(x, z):
 if __name__ == "__main__":
 
     # --- PARAMÈTRES DE CONTRÔLE ---
-    afficher_encadrement_angles_et_efforts = False  # affiche le print ci dessous qui justifie le choix de l'angle initial
-    afficher_deformee = False                       # affiche la deformee calculée pour une valeur donnée
-    afficher_graphiques_comparaison = True          # Permet de montrer sur un graph les resultats (pas très parlant)
-    afficher_tableaux_ecarts = False                # Renvoie les tableaux numériques des ecarts absolus et relatifs (Partie 4)
-    afficher_graph = False                          # Trace le graph des ecarts relatifs au constructeur pour profondeur et Layback
+    afficher_encadrement_angles_et_efforts = False  # affiche le print ci-dessous qui justifie le choix de l'angle initial
+    afficher_deformee = True                        # affiche la déformée calculée pour une valeur (réglage dans la Partie 1 du main)
+    afficher_graphiques_comparaison = False         # Permet de montrer sur un graph les résultats (pas très parlant)
+    afficher_tableaux_ecarts = True                 # Renvoie les tableaux numériques des écarts absolus et relatifs (Partie 4)
+    afficher_graph = True                           # Trace le graph des écarts relatifs au constructeur pour profondeur et Layback
 
     if afficher_encadrement_angles_et_efforts:
         print(
@@ -193,8 +193,14 @@ if __name__ == "__main__":
             f"\nOn peud encadrer au moins par ces angles l'inclinaison du premier element de câble")
 
     #region --- PARTIE 1 : TRAÇAGE DÉFORMÉE ET LAYBACK UNIQUE ---
+
+    # réglage les paramètres de la déformée
+    Longueur_du_cable = 50
+    Vitesse_du_bateau_en_noeuds = 3
+    Nombre_de_section_de_la_deformee = 50
+
     if afficher_deformee:
-        x, z = resoudre_deformee(50, 3, 50)
+        x, z = resoudre_deformee(Longueur_du_cable, Vitesse_du_bateau_en_noeuds, Nombre_de_section_de_la_deformee)
         tracer_deformee(x, z)
 
         layback = abs(x[0])

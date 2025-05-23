@@ -1,14 +1,17 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{report}
 
-%----------------------------------------
-% Packages
-%----------------------------------------
-
+%--------------------------------------------------------
+% Encodage et langues
+%--------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
+
+%--------------------------------------------------------
+% Packages classiques
+%--------------------------------------------------------
 \usepackage{graphicx}
-\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{amsmath, amsfonts, amssymb}
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{caption}
@@ -16,47 +19,120 @@
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{pagecolor}
+\usepackage{sectsty}
+\usepackage{helvet}
+\usepackage{setspace}
+\usepackage[pages=some]{background}
+\usetikzlibrary{arrows.meta, angles, quotes}
 
-%----------------------------------------
+
+%--------------------------------------------------------
+% Couleurs de la charte ENSTA
+%--------------------------------------------------------
+\definecolor{bleuENSTA}{HTML}{002A4B}
+\definecolor{corailENSTA}{HTML}{F05A28}
+\definecolor{grisENSTA}{gray}{0.3}
+
+%--------------------------------------------------------
 % Mise en page
-%----------------------------------------
-
+%--------------------------------------------------------
 \geometry{margin=2.5cm}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{40pt}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\thepage}
 \lhead{Projet UE 2.2 - Treuillage sonar remorqué}
+\rhead{\thepage}
+\sectionfont{\color{bleuENSTA!80}}
+\subsectionfont{\color{bleuENSTA!70}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\color{bleuENSTA!4}\hrule height 1pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\footrule}{\color{bleuENSTA!3}\hrule height 0.5pt}
 
-%----------------------------------------
-% Titre
-%----------------------------------------
 
-\title{\textbf{Rapport de Projet} \\
-\vspace{0.3cm}
-\large Treuillage d’un Sonar Latéral Remorqué}
-\author{Nom Prénom \\
-École / Université \\
-Encadrants : Nom(s)}
-\date{\today}
-
-%----------------------------------------
+%--------------------------------------------------------
 % Début du document
-%----------------------------------------
+%--------------------------------------------------------
+
 
 \begin{document}
 
-\maketitle
+%--------------------------------------------------------
+% Page de garde ENSTA
+%--------------------------------------------------------
 
-\tableofcontents
+
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=0.5,
+  contents={
+    \begin{tikzpicture}[remember picture, overlay]
+      \shade[inner color=bleuENSTA!60, outer color=white]
+        (current page.north west) circle (20cm);
+      \shade[inner color=bleuENSTA!60, outer color=white]
+        (current page.south east) circle (25cm);
+    \end{tikzpicture}
+  }
+}
+\BgThispage
+
+\begin{titlepage}
+
+    \color{bleuENSTA}
+    \centering
+    \vspace*{1cm}
+
+
+
+    {\Huge \bfseries Projet UE 2.2 \\[0.5cm]}
+    {\LARGE Treuillage sonar remorqué}
+
+    \vspace{2.5cm}
+    \includegraphics[height = 3cm]{logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu}
+    \includegraphics[height = 3cm]{DeepVisionSonar}
+
+
+    \vspace{2.5cm}
+    \textbf{Élèves}
+    Thomas FERRER \\
+    Ewen PINSART \\
+    Elouan STASSEN \\
+    Lancelot RAMIS
+
+
+    \vspace{1.8cm}
+    \textbf{Encadrants :} \\[0.3cm]
+    Jean-François GUILLEMETTE \\
+    Irvin PROBST
+
+    \vfill
+    {\large ENSTA Bretagne\\
+    Institut Polytechnique de Paris}
+
+    \vspace{1cm}
+    {\today}
+
+\end{titlepage}
 
 \newpage
+\tableofcontents
+\vspace{5cm}
+\newpage
+
+\fancyhead[L]{%
+  \includegraphics[height=1cm]{logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu}
+}
 
 %----------------------------------------
-% Introduction
+\chapter{Introduction}
 %----------------------------------------
-\section{Introduction}
-
-% Présentation du contexte, des enjeux du projet, de l’organisation du travail.
 
 Les sonars latéraux sont largement utilisés pour détecter la présence d’objets posés sur les fonds marins.
 Ils sont montés sur des « poissons » remorqués, immergés à faible distance du fond afin de bénéficier d’une bonne rasance.
@@ -73,18 +149,14 @@ soit par modélisation de la déformée du câble de remorquage.
 Par ailleurs, la mise à l’eau du sonar repose actuellement sur un touret manuel, peu pratique à utiliser.
 L’objectif du projet est donc double : modéliser la déformée du câble pour estimer le layback,
 et concevoir un support pour un treuil motorisé, permettant de faciliter et d’automatiser la mise à la mer du
-sonar:contentReference[oaicite:0]{index=0}.
+sonar.
 
 %----------------------------------------
-% Cahier des charges
+
+\chapter{Analyse du cahier des charges}
 %----------------------------------------
 
-\section{Analyse du cahier des charges}
-
-% Reprise des objectifs fonctionnels et contraintes techniques.
-
-\subsection{Objectifs fonctionnels}
-
+\section{Objectifs fonctionnels}
 
 Les objectifs principaux du projet sont les suivants :
 
@@ -99,8 +171,7 @@ Les objectifs principaux du projet sont les suivants :
 
 \end{itemize}
 
-
-\subsection{Contraintes techniques}
+\section{Contraintes techniques}
 
 
 Le cahier des charges impose plusieurs contraintes à respecter :
@@ -126,7 +197,9 @@ optimal du câble:contentReference[oaicite:1]{index=1}.
 % Étude théorique
 %----------------------------------------
 
-\section{Modélisation du système et estimation de la position du sonar}
+\chapter{Etude théorique}
+
+\section{Modélisation du système}
 
 
 Pour receuillir des données du sonar, il est nécéssaire d'en connaitre sa position. En effet, si le bateau tracteur
@@ -148,30 +221,79 @@ On pourra alors, estimer le layback du sonar.
 
 \end{itemize}
 
-
 \subsection{Données paramètres et hypothèses de travail}
 
 Hypothèses:
-  \item  Cable pesant, flottant et non élastique
-
+\begin{itemize}
+  \item Cable pesant, flottant et non élastique
+  \item Angle du premier élement de cable dans l'axe de la résultante sonar <-> câble
+\end{itemize}
 Données d'entrées:
 \begin{itemize}
   \item Vitesse du bateau: 4 nœuds soit 2,05 m/s
   \item Diamètre du cable: 6,3 mm
   \item Longueur du cable: 50 m
-  \item Mer(à 15 °C): Masse Volumique: 1025 kg/m^3    Viscosité dynamique: 1,22E-3 Pl
+  \item Mer(à 15 °C):
+  \item Masse Volumique: 1025 kg/m\textsuperscript{3}
+  \item Viscosité dynamique: \( 1{,}22 \times 10^{-3}~\text{Pl} \)
 \end{itemize}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1, >=Stealth]
 
+% Surface de l'eau
+\draw[blue!50!white, thick] (-1,2) -- (10,2);
+
+% Bateau
+\draw[fill=gray!30] (0,2) rectangle (2,2.8);
+\node at (1,3.1) {Bateau};
+
+% Câble déformé
+\draw[thick, orange!70!black, domain=2:9, smooth, variable=\x]
+  plot ({\x}, {2 - 0.6*sin((\x-2)*15)});
+\node at (5,1.2) {Câble};
+
+% Sonar
+\draw[fill=gray!50] (9.5,1.6) ellipse (0.4 and 0.2);
+\node[right] at (9.9,1.6) {Sonar};
+
+% Forces (exemple)
+\draw[->, red] (4,1.7) -- ++(0,-1) node[below] {$\vec{P}$};
+\draw[->, green!70!black] (4,1.7) -- ++(-0.8,0) node[left] {$\vec{f}$};
+
+\end{tikzpicture}
+\caption{Vue générale : bateau, câble déformé et sonar}
+\end{figure}
 
 \subsection{Modélisation des efforts hydrodynamiques}
 
 
-\subsubsection{Isolement du sonar}
+\subsubsection*{Isolement du sonar}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.3, >=Stealth]
+
+% Sonar
+\draw[fill=gray!30] (0,0) ellipse (1.2 and 0.6);
+\node at (0,-0.9) {Sonar};
+
+% Force du câble
+\draw[->, thick, blue] (0,0.6) -- ++(0,1) node[above] {$\vec{F}_1$};
+
+% Résultante P+f
+\draw[->, thick, red] (0,-0.6) -- ++(-1,-0.7) node[below left] {$\vec{F}_0$};
+
+% Label
+\node[right] at (1.5,0.5) {Résultante poids + traînée};
+
+\end{tikzpicture}
+\caption{Efforts appliqués sur le sonar}
+\end{figure}
 
 Dans le référentiel terrestre supposé galiléen, nous supposerons le sonar en translation rectiligne uniforme.
-On considère la force de pesanteur, la pensée d'archimère, la trainée et les frottements du à l'eau,
+On considère la force de pesanteur, la poussée d'archimède, la trainée et les frottements du à l'eau,
 ainsi que la force du cable sur le sonar comme l'ensemble des forces s'appliquant sur le système.
 
 
@@ -180,7 +302,48 @@ Dimension du sonar:
     Diamètre: 60 m
 
 
-\subsubsection{Isolement du cable}
+\subsubsection*{Isolement du cable}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.2, >=Stealth]
+
+% Segment de câble
+\draw[thick] (0,0) -- (4,1.5);
+\node at (2,1) {Section $i$};
+
+% Forces aux extrémités
+\draw[->, thick, blue] (0,0) -- ++(-1,0.4) node[above left] {$\vec{F}_{i-1}$};
+\draw[->, thick, blue] (4,1.5) -- ++(1,0.4) node[above right] {$\vec{F}_{i+1}$};
+
+% Poids et traînée
+\draw[->, red] (2,0.75) -- ++(0,-1) node[below] {$\vec{P}$};
+\draw[->, green!60!black] (2,0.75) -- ++(-1,0) node[left] {$\vec{f}$};
+
+% Angles manuels avec arc
+% alpha_{i-1}
+\draw[->, blue] (0,0) -- (1,0); % direction de référence horizontale
+\draw[->, blue] (0,0) -- (-1,0.4); % force F_{i-1}
+\draw[blue] (0.6,0) arc[start angle=0, end angle=158, radius=0.6];
+\node[blue] at (0.5,0.3) {$\alpha_{i-1}$};
+
+% alpha_i
+\draw[->, red] (0,0) -- (2,0.75); % segment de câble
+\draw[->, red] (0,0) -- (2,0); % base horizontale
+\draw[red] (0.8,0) arc[start angle=0, end angle=20.56, radius=0.8];
+\node[red] at (1,0.25) {$\alpha_i$};
+
+% alpha_{i+1}
+\draw[->, blue] (4,1.5) -- (5,1.5); % direction horizontale
+\draw[->, blue] (4,1.5) -- (3,0.75); % force F_{i+1}
+\draw[blue] (4.5,1.5) arc[start angle=0, end angle=225, radius=0.5];
+\node[blue] at (4.2,1.2) {$\alpha_{i+1}$};
+
+
+\end{tikzpicture}
+\caption{Bilan des forces sur une section inclinée du câble}
+\end{figure}
+
 
 \subsection{Résultats et Validation du modèle}
 
@@ -195,12 +358,14 @@ allant jusqu'à près de 20\% dans les cas les plus critiques.
 De tel écart pouvent sembler être mineur mais sont en réalité important lorsqu'on parle de récif dans un port par exemple.
 
 On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
+\begin{itemize}
+  \item Constantes d'entrée différentes et incertitude
+  \item Calculs de trainées plus possibles
+\end{itemize}
 
-\item Constantes d'entrée différentes & incertitude
-\item Calculs de trainées plus possibles
 
+\section{Estimation de la position du sonar}
 
-% Diagrammes, équations, modélisations nécessaires.
 
 %----------------------------------------
 % Choix de conception
@@ -231,7 +396,7 @@ On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
 % Bilan et perspectives
 %----------------------------------------
 
-\section{Conclusion et perspectives}
+\chapter{Conclusion et perspectives}
 
 % Synthèse du projet, limites, pistes d’amélioration.
 
