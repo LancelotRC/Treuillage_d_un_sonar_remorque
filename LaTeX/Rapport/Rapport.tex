@@ -201,42 +201,45 @@ optimal du câble:contentReference[oaicite:1]{index=1}.
 
 \section{Modélisation du système}
 
+Pour recueillir des données exploitables à partir du sonar, il est nécessaire de connaître sa position exacte.
+En effet, si le navire tracteur peut être géolocalisé par GPS, ce n’est pas le cas du sonar, car les ondes électromagnétiques pénètrent très peu dans l’eau.
+La difficulté réside donc dans l’estimation de la position du sonar immergé.
 
-Pour receuillir des données du sonar, il est nécéssaire d'en connaitre sa position. En effet, si le bateau tracteur
-peut être géolocaliser par GPS, ce n'est pas le cas du sonar car les ondes électromagnétiques ne traversent pas l'eau.
-
-Une solution enviseagable est d'estimer la déformée du cable à partir des efforts subis par le système.
-On pourra alors, estimer le layback du sonar.
+Une solution envisageable consiste à estimer la déformée du câble à partir des efforts subis par le système.
+Cela permet ensuite d’estimer la distance horizontale entre le navire et le sonar, appelée layback, et ainsi d’en déduire une position approximative du sonar.
 
 \subsection{Démarche}
 
 \begin{itemize}
 
-  \item Déterminer les efforts sur le bout du cable en isolant le sonar.
-  \item Discrétiser le cable en n éléments indéformables
-  \item Détermination de l'inclinaison du premier segment de cable par rapport au deuxième
-  \item Itération sur les tous les étéments restants
-  \item Estimation du layback
-
+ \item Déterminer les efforts s'exerçant à l'extrémité du câble en isolant le sonar.
+ \item Discrétiser le câble en $n$ éléments indéformables.
+ \item Calculer l'inclinaison du premier segment de câble par rapport au second, en utilisant l'équilibre des forces appliquées sur le sonar.
+ \item Réaliser une itération sur l’ensemble des segments restants pour déterminer progressivement la forme du câble.
+ \item Estimer la distance horizontale entre le sonar et le navire (layback) à partir de la déformée obtenue.
 
 \end{itemize}
 
-\subsection{Données paramètres et hypothèses de travail}
+\subsection{Données, paramètres et hypothèses de travail}
 
-Hypothèses:
+\paragraph{Hypothèses de modélisation :}
 \begin{itemize}
-  \item Cable pesant, flottant et non élastique
-  \item Angle du premier élement de cable dans l'axe de la résultante sonar <-> câble
+  \item Le câble est considéré comme pesant, flottant, et non élastique.
+  \item L’angle du premier élément de câble est aligné avec la résultante des forces exercées entre le sonar et le câble.
 \end{itemize}
-Données d'entrées:
+
+\paragraph{Données d’entrée :}
 \begin{itemize}
-  \item Vitesse du bateau: 4 nœuds soit 2,05 m/s
-  \item Diamètre du cable: 6,3 mm
-  \item Longueur du cable: 50 m
-  \item Mer(à 15 °C):
-  \item Masse Volumique: 1025 kg/m\textsuperscript{3}
-  \item Viscosité dynamique: \( 1{,}22 \times 10^{-3}~\text{Pl} \)
+  \item Vitesse du bateau : 4 nœuds, soit 2{,}05 m/s.
+  \item Diamètre du câble : 6{,}3 mm.
+  \item Longueur du câble : 50 m.
+  \item Propriétés de l’eau de mer (à 15\,°C) :
+  \begin{itemize}
+    \item Masse volumique : \( 1025~\text{kg/m}^3 \).
+    \item Viscosité dynamique : \( 1{,}22 \times 10^{-3}~\text{Pl} \).
+  \end{itemize}
 \end{itemize}
+
 
 \begin{figure}[H]
 \centering
@@ -292,10 +295,19 @@ Données d'entrées:
 \caption{Efforts appliqués sur le sonar}
 \end{figure}
 
-Dans le référentiel terrestre supposé galiléen, nous supposerons le sonar en translation rectiligne uniforme.
-On considère la force de pesanteur, la poussée d'archimède, la trainée et les frottements du à l'eau,
-ainsi que la force du cable sur le sonar comme l'ensemble des forces s'appliquant sur le système.
 
+Dans le référentiel terrestre, supposé galiléen, nous considérons le sonar en translation rectiligne uniforme.
+
+Les forces appliquées sur le système (le sonar) sont les suivantes :
+\begin{itemize}
+  \item La force de pesanteur \( \vec{P} \).
+  \item La poussée d’Archimède \( \vec{\Pi} \).
+  \item La force de traînée hydrodynamique tangentielle.
+  \item Les frottements dus à l’eau (traînée normale).
+  \item La force exercée par le câble sur le sonar.
+\end{itemize}
+
+L’ensemble de ces forces est pris en compte dans l’analyse dynamique pour déterminer l’orientation initiale du câble ainsi que le comportement du système tracté.
 
 Dimension du sonar:
     Longueur: 830 mm
@@ -348,10 +360,10 @@ Dimension du sonar:
 \subsection{Résultats et Validation du modèle}
 
 
-Grâce au code python disponible en annexe ( X ), nous avons obtenus ces résulats:
+Grâce au code python disponible en annexe, nous avons obtenus ces résulats:
 
-Layback (à 4 nœuds): X m
-Profondeur (à 4 nœuds): X m
+Layback (à 4 nœuds): 39.97 m
+Profondeur (à 4 nœuds): 26.82 m
 
 Si les ordres de grandeurs semblent être respectés, on constate tout de même une différences de plusieurs mêtres,
 allant jusqu'à près de 20\% dans les cas les plus critiques.
@@ -366,7 +378,24 @@ On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
 
 \section{Estimation de la position du sonar}
 
+Une fois la valeur du \textit{layback} estimée, on peut calculer la position réelle du sonar tracté. Cela permet d’associer précisément les données acoustiques enregistrées par le sonar aux bonnes coordonnées géographiques, ce qui est essentiel pour produire des cartes fiables et interprétables.
 
+Pour effectuer cette estimation, plusieurs données de navigation du navire et les caractéristiques du câble sont nécessaires, notamment :
+
+\begin{itemize}
+  \item Le \textbf{cap du navire} (ou direction), noté $\theta$ (en radians ou degrés, à convertir selon le contexte)
+  \item Les \textbf{coordonnées du navire} à l’instant considéré, notées $x_{\text{navire}}$ et $y_{\text{navire}}$ (en système cartésien ou géographique)
+  \item La \textbf{valeur du layback}, notée $L$, qui représente la distance entre le sonar et le point de remorquage à la poupe du navire, selon la modélisation du câble
+\end{itemize}
+
+En supposant une ligne droite entre le navire et le sonar (modèle simplifié), les \textbf{coordonnées du sonar} peuvent être estimées par les équations suivantes :
+
+\begin{align*}
+x_{\text{sonar}} &= x_{\text{navire}} - L \cdot \cos(\theta) \\
+y_{\text{sonar}} &= y_{\text{navire}} - L \cdot \sin(\theta)
+\end{align*}
+
+Ce calcul permet de \textbf{géoréférencer correctement les données sonar}, ce qui est fondamental pour toute analyse bathymétrique, cartographique ou d'imagerie sous-marine.
 %----------------------------------------
 % Choix de conception
 %----------------------------------------
