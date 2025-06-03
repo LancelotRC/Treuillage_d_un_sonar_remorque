@@ -28,6 +28,7 @@
 \usepackage{helvet}
 \usepackage{setspace}
 \usepackage[pages=some]{background}
+\usepackage{amssymb}
 \usetikzlibrary{arrows.meta, angles, quotes}
 
 
@@ -102,7 +103,7 @@
     \vspace{2.5cm}
     \textbf{Élèves}
     Thomas FERRER \\
-    Ewen PINSART \\
+    Ewen PINSARD \\
     Elouan STASSEN \\
     Lancelot RAMIS
 
@@ -137,14 +138,14 @@
 Les sonars latéraux sont largement utilisés pour détecter la présence d’objets posés sur les fonds marins.
 Ils sont montés sur des « poissons » remorqués, immergés à faible distance du fond afin de bénéficier d’une bonne rasance.
 Ce mode de détection permet de repérer les objets par leur « ombre acoustique », formée par la réflexion des ondes sonores sur ces derniers.
-
+\\ \\
 
 Cependant, plusieurs défis techniques doivent être relevés pour une mise en œuvre efficace.
 L’un des principaux est le positionnement du sonar : les données recueillies sont géo-référencées à partir de la
 position GPS du navire, alors que le sonar est décalé horizontalement vers l’arrière. Il est donc nécessaire d’estimer
 cette distance, appelée « layback », pour corriger le positionnement. Cela peut être réalisé soit expérimentalement,
 soit par modélisation de la déformée du câble de remorquage.
-
+\\ \\
 
 Par ailleurs, la mise à l’eau du sonar repose actuellement sur un touret manuel, peu pratique à utiliser.
 L’objectif du projet est donc double : modéliser la déformée du câble pour estimer le layback,
@@ -191,7 +192,7 @@ Le cahier des charges impose plusieurs contraintes à respecter :
 Une tâche complémentaire optionnelle consiste à concevoir un système de trancannage pour assurer un enroulement
 optimal du câble:contentReference[oaicite:1]{index=1}.
 
-
+\newpage
 
 %----------------------------------------
 % Étude théorique
@@ -214,8 +215,8 @@ On pourra alors, estimer le layback du sonar.
 
   \item Déterminer les efforts sur le bout du cable en isolant le sonar.
   \item Discrétiser le cable en n éléments indéformables
-  \item Détermination de l'inclinaison du premier segment de cable par rapport au deuxième
-  \item Itération sur les tous les étéments restants
+  \item Déterminer de proche en proche l'inclinaison de l'élément suivant
+  \item Itération sur les tous les éléments restants
   \item Estimation du layback
 
 
@@ -225,8 +226,9 @@ On pourra alors, estimer le layback du sonar.
 
 Hypothèses:
 \begin{itemize}
-  \item Cable pesant, flottant et non élastique
-  \item Angle du premier élement de cable dans l'axe de la résultante sonar <-> câble
+    \item Cable pesant, flottant et non élastique
+    \item Angle du premier élement de cable dans l'axe de la résultante sonar <-> câble
+    \item Cable orienté selon son effort
 \end{itemize}
 Données d'entrées:
 \begin{itemize}
@@ -240,27 +242,83 @@ Données d'entrées:
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=1, >=Stealth]
+\begin{tikzpicture}[scale=0.2]
 
-% Surface de l'eau
-\draw[blue!50!white, thick] (-1,2) -- (10,2);
+    \coordinate (O) at (0,0);
+    \coordinate (S) at (-39.2306, -27.8218);
 
-% Bateau
-\draw[fill=gray!30] (0,2) rectangle (2,2.8);
-\node at (1,3.1) {Bateau};
+    \fill[blue!10] (-50, 0) -- (10, 0) -- (10, -35) -- (-50, -35) -- cycle;
 
-% Câble déformé
-\draw[thick, orange!70!black, domain=2:9, smooth, variable=\x]
-  plot ({\x}, {2 - 0.6*sin((\x-2)*15)});
-\node at (5,1.2) {Câble};
+    % Déformée
 
-% Sonar
-\draw[fill=gray!50] (9.5,1.6) ellipse (0.4 and 0.2);
-\node[right] at (9.9,1.6) {Sonar};
+    \draw [thick, orange]
+    plot coordinates {
+    (-39.2306, -27.8218)
+    (-39.1764, -26.8233)
+    (-39.0070, -25.8378)
+    (-38.7318, -24.8764)
+    (-38.3620, -23.9472)
+    (-37.9127, -23.0539)
+    (-37.3962, -22.1976)
+    (-36.8248, -21.3769)
+    (-36.2077, -20.5900)
+    (-35.5530, -19.8341)
+    (-34.8666, -19.1069)
+    (-34.1538, -18.4056)
+    (-33.4182, -17.7281)
+    (-32.6633, -17.0723)
+    (-31.8915, -16.4364)
+    (-31.1052, -15.8186)
+    (-30.3059, -15.2177)
+    (-29.4952, -14.6321)
+    (-28.6744, -14.0610)
+    (-27.8445, -13.5031)
+    (-27.0064, -12.9576)
+    (-26.1608, -12.4237)
+    (-25.3086, -11.9006)
+    (-24.4501, -11.3876)
+    (-23.5861, -10.8843)
+    (-22.7168, -10.3899)
+    (-21.8427, -9.9041)
+    (-20.9643, -9.4263)
+    (-20.0817, -8.9562)
+    (-19.1953, -8.4933)
+    (-18.3052, -8.0374)
+    (-17.4119, -7.5880)
+    (-16.5154, -7.1449)
+    (-15.6160, -6.7078)
+    (-14.7138, -6.2765)
+    (-13.8090, -5.8506)
+    (-12.9017, -5.4301)
+    (-11.9921, -5.0146)
+    (-11.0803, -4.6040)
+    (-10.1664, -4.1981)
+    (-9.2505, -3.7967)
+    (-8.3327, -3.3997)
+    (-7.4131, -3.0069)
+    (-6.4917, -2.6181)
+    (-5.5688, -2.2333)
+    (-4.6442, -1.8522)
+    (-3.7181, -1.4749)
+    (-2.7906, -1.1011)
+    (-1.8617, -0.7307)
+    (-0.9315, -0.3637)
+    (0.0000, 0.0000)
+    };
 
-% Forces (exemple)
-\draw[->, red] (4,1.7) -- ++(0,-1) node[below] {$\vec{P}$};
-\draw[->, green!70!black] (4,1.7) -- ++(-0.8,0) node[left] {$\vec{f}$};
+    % Bateau
+    \draw[fill=yellow!30] (0,-0.5) -- (6,-0.5) -- (8,1.5) -- (5, 1.3) -- (4.5, 3) -- (3, 3)
+    -- (3.2, 1) -- (0, 1) -- cycle;
+
+    % Sonar
+    \draw[fill=gray!50]  (S) ellipse (1 and 0.5);
+
+    % Surface de l'eau
+    \draw[blue!50!white, thick] (-50, 0) -- (10, 0) ;
+
+    \node at (-5, 2) {$La \ melitee$};
+    \node at (-34, -27) {$Sonar$};
+    \draw[red, thick, ->] (S) -- ++ (-1, -5) node[left] {$\vec{F}_{sonar}$};
 
 \end{tikzpicture}
 \caption{Vue générale : bateau, câble déformé et sonar}
@@ -268,80 +326,154 @@ Données d'entrées:
 
 \subsection{Modélisation des efforts hydrodynamiques}
 
+Pour chaque élément de câble, on cherche à définir l'angle suivant à partir des données déja connues.
+On découpe alors deux parties :
+\begin{itemize}
+    \item L'initialisation, avec les efforts du sonar et une estimation de l'angle de la première section de câble
+    \item La reccurence, on calcul l'angle de la section suivante en connaissant celui de la section actuelle et celui
+    de l'effort de la section précédente.
+\end{itemize}
 
 \subsubsection*{Isolement du sonar}
+
+
+L'initialisation dans un premier temps est plutot évidente, on connait les efforts du sonar sur le cable et donc les
+efforts du cable sur le sonar par principe d'action réciproque.
+Dans le référentiel terrestre supposé galiléen, nous supposons le sonar en translation rectiligne uniforme.
+On considère la force de pesanteur et la poussée d'archimède (ces deux sont représentés par ${\vec{P}}$),
+les frottements visqueux du sonar dans l'eau $\vec{f_{frot}}$, ainsi que la force du cable sur le sonar $\vec{F}_{cable}$
+
+Dimension du sonar:
+\begin{itemize}
+    \item Longueur: 830 m
+    \item Diamètre: 60 m
+\end{itemize}
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[scale=1.3, >=Stealth]
 
-% Sonar
-\draw[fill=gray!30] (0,0) ellipse (1.2 and 0.6);
-\node at (0,-0.9) {Sonar};
+    % Sonar
+    \draw[fill=gray!30] (0,0) ellipse (3 and 0.3);
+    \node at (1.5, 0.8) {Sonar};
 
-% Force du câble
-\draw[->, thick, blue] (0,0.6) -- ++(0,1) node[above] {$\vec{F}_1$};
+    \node at (0,0) {+} node [above right] {${G}$};
+    % Force du câble
+    \draw[->, blue] (0,0.3) -- ++(0.4, 2) node[above right] {$\vec{F}_{cable}$};
+    % Poids
+    \draw[->, red] (0,0) -- ++(0,-2) node[below right] {$\vec{P}$};
+    % frottements
+    \draw[->, red] (0,0) -- ++(-0.4, 0) node[left] {$\vec{f}_{frot}$};
+    %Direction d'avancement
+    \draw[->, very thick, black] (2.5,1) -- ++(1,0) node[above left] {$\vec{v}_{sonar}$};
+    \draw[->, very thick, black] (-2.5,2) -- ++(0,-1) node[above right] {$\vec{g}$};
 
-% Résultante P+f
-\draw[->, thick, red] (0,-0.6) -- ++(-1,-0.7) node[below left] {$\vec{F}_0$};
+    \draw[thin, red, dashed] (0, -2) -- ++(-0.4, 0) -- ++(0,+2);
+    \draw[->, very thick, red] (0, 0) -- ++(-0.4, -2) node[left] {$\vec{F}$};
 
-% Label
-\node[right] at (1.5,0.5) {Résultante poids + traînée};
 
 \end{tikzpicture}
 \caption{Efforts appliqués sur le sonar}
 \end{figure}
 
-Dans le référentiel terrestre supposé galiléen, nous supposerons le sonar en translation rectiligne uniforme.
-On considère la force de pesanteur, la poussée d'archimède, la trainée et les frottements du à l'eau,
-ainsi que la force du cable sur le sonar comme l'ensemble des forces s'appliquant sur le système.
 
+On en déduit l'équation suivante issue du principe fondamental de la statique
+\\
+\[
+    \vec{F}_{cable} + \vec{f}_{frot} + \vec{P} = \vec{0} \\
+    \Leftrightarrow  {F}_{cable} = - (\vec{f}_{frot} \ \vec{P})
+\]
 
-Dimension du sonar:
-    Longueur: 830 mm
-    Diamètre: 60 m
-
+Cette équation permet ainsi de déduire l'orientation de l'effort du cable sur le sonar. \\
+Attention, ici se joue une approximation importante, on sait que le cable sera orienté entre la verticale et la
+direction de son effort. En effet, son inclinaison dépend des efforts qui s'appliquent en ses extrémités mais aussi
+celles qui s'appliquent en son milieu (forces de trainée sur le câble). Ces efforts implique que le cable ne tire pas
+dans son axe mais bien avec un angle dépendant des frottements visqueux.
 
 \subsubsection*{Isolement du cable}
+
+projection sur la normal du câble :
+\[
+    -F_{nc} + \sin(\alpha_1) \times F_1 - \sin(\alpha_0) \times (F_0 - P_{c}) = 0
+\]
+
+projection sur la tengente du câble :
+
+\begin{align*}
+    &-F_{t} + \cos(\alpha_1) \cdot F_1 - \cos(\alpha_0) \cdot (F_0 + P_c) = 0 \\
+    &\hspace*{2cm}\left\{
+    \begin{aligned}
+        (\sin(\alpha_1) \cdot F_1)^2 &= \left(F_{n} + \sin(\alpha_0) \cdot (F_0 - P_c)\right)^2 \\
+        (\cos(\alpha_1) \cdot F_1)^2 &= \left(F_{n} + \cos(\alpha_0) \cdot (F_0 + P_c)\right)^2
+    \end{aligned}
+    \right. \\
+    &\left( \sin^2(\alpha_1) + \cos^2(\alpha_1) \right) \cdot F_1^2 =
+    \left(F_{n} + \sin(\alpha_0) \cdot (F_0 - P_c)\right)^2 +
+    \left(F_{n} + \cos(\alpha_0) \cdot (F_0 + P_c)\right)^2 \\
+    &\Rightarrow F_1 = \sqrt{
+        \left(F_{n} + \sin(\alpha_0) \cdot (F_0 - P_c)\right)^2 +
+        \left(F_{n} + \cos(\alpha_0) \cdot (F_0 + P_c)\right)^2
+    } \\
+    &\alpha_1 = \arcsin\left(
+        -\frac{1}{F_1} \cdot \left(F_{n} + \sin(\alpha_0) \cdot (F_0 - P_c)\right)
+    \right)
+\end{align*}
+
+
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[scale=1.2, >=Stealth]
 
-% Segment de câble
-\draw[thick] (0,0) -- (4,1.5);
-\node at (2,1) {Section $i$};
+    \coordinate (A) at (-1, -2);
+    \coordinate (B) at (1, 2);
+    \coordinate (G) at (0, 0);
+    \coordinate (Ab) at (-1.5, -3);
+    \coordinate (Bb) at (1.5, 3);
 
-% Forces aux extrémités
-\draw[->, thick, blue] (0,0) -- ++(-1,0.4) node[above left] {$\vec{F}_{i-1}$};
-\draw[->, thick, blue] (4,1.5) -- ++(1,0.4) node[above right] {$\vec{F}_{i+1}$};
+        \draw[->, very thick, black] (2.5,1) -- ++(1,0) node[above left] {$\vec{v}_{sonar}$};
+    \draw[->, very thick, black] (-2.5,2) -- ++(0,-1) node[above right] {$\vec{g}$};
 
-% Poids et traînée
-\draw[->, red] (2,0.75) -- ++(0,-1) node[below] {$\vec{P}$};
-\draw[->, green!60!black] (2,0.75) -- ++(-1,0) node[left] {$\vec{f}$};
+    % Segment de câble
+    \draw[thick] (A) -- (B);
+    \draw[thin, dashed] (Ab) -- (Bb);
+    \node at (1,0) {Section $i$};
 
-% Angles manuels avec arc
-% alpha_{i-1}
-\draw[->, blue] (0,0) -- (1,0); % direction de référence horizontale
-\draw[->, blue] (0,0) -- (-1,0.4); % force F_{i-1}
-\draw[blue] (0.6,0) arc[start angle=0, end angle=158, radius=0.6];
-\node[blue] at (0.5,0.3) {$\alpha_{i-1}$};
+    % Forces aux extrémités
+    \draw[->, thick, blue] (A) -- ++(-0.3,-1.5) node[below left] {$\vec{F}_{i-1}$};
+    \draw[->, thick, blue] (B) -- ++(0.8, 0.8) node[above right] {$\vec{F}_{i}$};
 
-% alpha_i
-\draw[->, red] (0,0) -- (2,0.75); % segment de câble
-\draw[->, red] (0,0) -- (2,0); % base horizontale
-\draw[red] (0.8,0) arc[start angle=0, end angle=20.56, radius=0.8];
-\node[red] at (1,0.25) {$\alpha_i$};
+    % Poids et traînée
+    \draw[->, red] (G) -- ++(0,-1) node[below] {$\vec{P}$};
+    \draw[->, red] (G) -- ++(-2,0) node[left] {$\vec{f}$};
 
-% alpha_{i+1}
-\draw[->, blue] (4,1.5) -- (5,1.5); % direction horizontale
-\draw[->, blue] (4,1.5) -- (3,0.75); % force F_{i+1}
-\draw[blue] (4.5,1.5) arc[start angle=0, end angle=225, radius=0.5];
-\node[blue] at (4.2,1.2) {$\alpha_{i+1}$};
+    % Angles
+
+    % alpha_{i-2}
+    \coordinate (C) at (-1, -1);
+    \coordinate (D) at (-1.2,-3);
+    \draw pic[draw = blue, ->, angle eccentricity = 1] {angle = C--A--D};
+    \draw [thick, green!70!black, dashed] (C) -- ++ (0, -2);
+    \node [blue] at (-1.8, -1.8) {$\alpha_{i-2}$};
+
+    % alpha_{i}
+    \coordinate (E) at (1, 3);
+    \coordinate (F) at (0.2, 1.2);
+    \draw pic[draw = blue, ->, angle eccentricity = 1] {angle = E--B--F};
+    \draw [thick, green!70!black, dashed] (E) -- ++ (0, -2);
+    \node [blue] at (0.2, 2) {$\alpha_{i}$};
+    \draw [thick, blue, dashed] (B) -- (F);
+
+    % alpha_{i-1}
+    \coordinate (H) at (0, 1);
+
+    \draw pic[draw = black, ->, angle eccentricity = 1] {angle = H--G--A};
+    \draw [thick, green!70!black, dashed] (H) -- ++ (0, -1);
+    \node [black] at (-0.7, 0.5) {$\alpha_{i-1}$};
 
 
 \end{tikzpicture}
-\caption{Bilan des forces sur une section inclinée du câble}
+\caption{Bilan des forces sur un segement du câble}
 \end{figure}
 
 
@@ -365,7 +497,58 @@ On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
 
 
 \section{Estimation de la position du sonar}
+\begin{figure}[H]
+    \begin{tikzpicture}
 
+        \draw[ultra thick, ->] (0, 0) -- (10,0) node[below] {$\vec{x}$};
+        \draw[ultra thick, ->] (0, 0) -- (0,7) node[left] {$\vec{y}$};
+
+
+        \begin{scope}[rotate around = {-60:(2,0)}]
+            \coordinate (S) at (0,1);
+            \coordinate (B) at (0,5);
+            \node at (S) {+};
+            \node at (S) [below]{Sonar};
+            \draw [fill = yellow!30] (B) -- +(0.3,0) -- +(0.5, 1) -- +(0, 1.8) -- +(-0.5,1) -- +(-0.3,0) -- cycle;
+            \node at (B) {+};
+            \node at (B) [below right]{Bateau};
+            \draw[very thick] (B) -- (S);
+            \draw[dashed] ([shift={(0.5,0)}]S) -- ([shift={(-1.5,0)}]S);
+            \draw[dashed] ([shift={(0.5,0)}]B) -- ([shift={(-1.5,0)}]B);
+            \draw[thick,->] ([shift={(-1,0)}]B) -- ([shift={(-1,0)}]S);
+            \node at (-1.5,3) {layback};
+        \end{scope}
+
+    \end{tikzpicture}
+\end{figure}
+
+Une fois la valeur du \textit{layback} estimée, on peut calculer la position réelle du sonar tracté. Cela permet
+d’associer précisément les données acoustiques enregistrées par le sonar aux bonnes coordonnées géographiques, ce qui
+est essentiel pour produire des cartes fiables et interprétables.
+
+Pour effectuer cette estimation, plusieurs données de navigation du navire et les caractéristiques du câble sont
+nécessaires, notamment :
+
+\begin{itemize}
+  \item Le \textbf{cap du navire} (ou direction), noté $\theta$ (en radians ou degrés, à convertir selon le contexte)
+  \item Les \textbf{coordonnées du navire} à l’instant considéré, notées $x_{\text{navire}}$ et $y_{\text{navire}}$
+  (en système cartésien ou géographique)
+  \item La \textbf{valeur du layback}, notée $L$, qui représente la distance entre le sonar et le point de remorquage à
+  la poupe du navire, selon la modélisation du câble
+\end{itemize}
+
+En supposant une ligne droite entre le navire et le sonar (modèle simplifié), les \textbf{coordonnées du sonar} peuvent
+être estimées par les équations suivantes :
+
+
+\begin{align*}
+    x_{\text{sonar}} &= x_{\text{navire}} - L \cdot \cos(\theta) \\
+    y_{\text{sonar}} &= y_{\text{navire}} - L \cdot \sin(\theta)
+\end{align*}
+
+
+Ce calcul permet de \textbf{géoréférencer correctement les données sonar}, ce qui est fondamental pour toute analyse
+bathymétrique, cartographique ou d'imagerie sous-marine.
 
 %----------------------------------------
 % Choix de conception
