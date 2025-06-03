@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.22)  23 MAY 2025 14:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.22)  3 JUN 2025 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -975,7 +975,7 @@ File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
 z/libraries\tikzlibraryquotes.code.tex
 File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 64
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 65
 .
 
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
@@ -993,32 +993,32 @@ Package babel Info: 'french' activates 'french' shorthands.
 )
 \openout1 = `Rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Info: Redefining \degres on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Info: Redefining \degres on input line 65.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 64.
+(french.ldf)             reported on input line 65.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 64.
-LaTeX Info: Redefining \up on input line 64.
+(french.ldf)             reported on input line 65.
+LaTeX Info: Redefining \up on input line 65.
 
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -1079,7 +1079,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 65.
 
 (C:/Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-Projet Decouverte 
 des syst√®mes\Treuillage_d_un_sonar_remorque\auxil\Rapport.out)
@@ -1093,18 +1093,18 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count370
-<logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png, id=7
-4, 2338.7375pt x 655.44875pt>
+<logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png, id=1
+30, 2338.7375pt x 655.44875pt>
 File: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png 
 Graphic file (type png)
 <use logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png>
 Package pdftex.def Info: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-H
-orizontal-Bleu.png  used on input line 98.
+orizontal-Bleu.png  used on input line 99.
 (pdftex.def)             Requested size: 304.54616pt x 85.35826pt.
-<DeepVisionSonar.png, id=76, 225.84375pt x 73.02281pt>
+<DeepVisionSonar.png, id=132, 225.84375pt x 73.02281pt>
 File: DeepVisionSonar.png Graphic file (type png)
 <use DeepVisionSonar.png>
-Package pdftex.def Info: DeepVisionSonar.png  used on input line 99.
+Package pdftex.def Info: DeepVisionSonar.png  used on input line 100.
 (pdftex.def)             Requested size: 264.019pt x 85.35826pt.
 
 
@@ -1136,11 +1136,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.127 \newpage
+l.128 \newpage
                [1
 
 ]
 Chapitre 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--149
+
+ []
+
 
 
 [2
@@ -1153,14 +1173,8 @@ Chapitre 2.
 
 ]
 Chapitre 3.
-
-Overfull \hbox (14.6818pt too wide) in paragraph at lines 217--218
-[]\T1/phv/m/n/12 DÈtermination de l'in-cli-nai-son du pre-mier seg-ment de cabl
-e par rap-port au deuxiËme 
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
-36.
+38.
 (C:\Users\lalol\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
@@ -1173,25 +1187,57 @@ File: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png
 Graphic file (type png)
 <use logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png>
 Package pdftex.def Info: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-H
-orizontal-Bleu.png  used on input line 353.
+orizontal-Bleu.png  used on input line 378.
 (pdftex.def)             Requested size: 101.4916pt x 28.45274pt.
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
+
+ []
+
+
 
 File: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png 
 Graphic file (type png)
 <use logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png>
 Package pdftex.def Info: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-H
-orizontal-Bleu.png  used on input line 399.
+orizontal-Bleu.png  used on input line 478.
 (pdftex.def)             Requested size: 101.4916pt x 28.45274pt.
 [6]
+
+File: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png 
+Graphic file (type png)
+<use logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png>
+Package pdftex.def Info: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-H
+orizontal-Bleu.png  used on input line 524.
+(pdftex.def)             Requested size: 101.4916pt x 28.45274pt.
+[7]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 525.
+
+
+File: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png 
+Graphic file (type png)
+<use logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png>
+Package pdftex.def Info: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-H
+orizontal-Bleu.png  used on input line 562.
+(pdftex.def)             Requested size: 101.4916pt x 28.45274pt.
+[8]
+
+File: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png 
+Graphic file (type png)
+<use logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-Horizontal-Bleu.png>
+Package pdftex.def Info: logoENSTA/PNG/horizontal/Ensta-logotype-IP-Paris-RVB-H
+orizontal-Bleu.png  used on input line 582.
+(pdftex.def)             Requested size: 101.4916pt x 28.45274pt.
+[9]
 Chapitre 4.
 
 
-[7
+[10
 
 ]
 
-[8
+[11
 
 ]
 (C:/Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-Projet Decouverte 
@@ -1200,38 +1246,33 @@ des syst√®mes\Treuillage_d_un_sonar_remorque\auxil\Rapport.aux)
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-
-
-Package rerunfilecheck Warning: File `Rapport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Rapport.out':
-(rerunfilecheck)             Before: 637F2D481749D4F5CB6C4D84438FB8F5;1346
-(rerunfilecheck)             After:  065918D5EC8DE9D4AE951C57F65BFD7E;4148.
+Package rerunfilecheck Info: File `Rapport.out' has not changed.
+(rerunfilecheck)             Checksum: 065918D5EC8DE9D4AE951C57F65BFD7E;4148.
  ) 
 Here is how much of TeX's memory you used:
- 32727 strings out of 470063
- 661405 string characters out of 5478870
- 1065662 words of memory out of 5000000
- 58832 multiletter control sequences out of 15000+600000
- 663739 words of font info for 81 fonts, out of 8000000 for 9000
+ 32924 strings out of 470063
+ 664569 string characters out of 5478870
+ 1070672 words of memory out of 5000000
+ 59023 multiletter control sequences out of 15000+600000
+ 666755 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,96p,418b,1206s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi12.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lalol/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lalol/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lalol/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+cmex10.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><C:/Users/lalol/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lalol/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lalol/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lalol/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lalol/App
+Data/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lalol/
+AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lal
+ol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on "C:/Users\lalol\OneDrive\Documents\Scolaire\1A ENSTA B\UE2.2-
 Projet Decouverte des syst√®mes\Treuillage_d_un_sonar_remorque\out\Rapport.pdf"
- (9 pages, 365334 bytes).
+ (12 pages, 404795 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 

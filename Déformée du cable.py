@@ -17,7 +17,7 @@ mu = 1.1*10**(-3)
 
 #region --- CÂBLE ---
 L_tot = 50.0            # Longueur totale du câble (m)
-n = 15                 # Nombre de segments
+n = 5000                 # Nombre de segments
 D = 0.0063              # Diamètre du câble (m)
 mass_lin = 0.035        # Masse linéique du câble (kg/m)
 
@@ -195,9 +195,9 @@ if __name__ == "__main__":
     #region --- PARTIE 1 : TRAÇAGE DÉFORMÉE ET LAYBACK UNIQUE ---
 
     # réglage les paramètres de la déformée
-    Longueur_du_cable = 50
+    Longueur_du_cable = 200
     Vitesse_du_bateau_en_noeuds = 3
-    Nombre_de_section_de_la_deformee = 50
+    Nombre_de_section_de_la_deformee = 400
 
     if afficher_deformee:
         x, z = resoudre_deformee(Longueur_du_cable, Vitesse_du_bateau_en_noeuds, Nombre_de_section_de_la_deformee)
