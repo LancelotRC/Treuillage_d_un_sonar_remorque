@@ -195,10 +195,16 @@ optimal du câble:contentReference[oaicite:1]{index=1}.
 \newpage
 
 %----------------------------------------
+% Données du sonar 
+%----------------------------------------
+\chapter{Interprétation des données du sonar}
+
+%----------------------------------------
 % Étude théorique
 %----------------------------------------
 
 \chapter{Etude théorique}
+
 
 \section{Modélisation du système}
 
@@ -392,7 +398,7 @@ Les forces appliquées sur le système (le sonar) sont les suivantes :
   \item La force exercée par le câble sur le sonar.
 \end{itemize}
 
-L’ensemble de ces forces est pris en compte dans l’analyse dynamique pour déterminer l’orientation initiale du câble 
+L’ensemble de ces forces est pris en compte dans l’analyse dynamique pour déterminer l’orientation initiale du câble
 ainsi que le comportement du système tracté.
 
 On en déduit l'équation suivante issue du principe fondamental de la statique
@@ -496,23 +502,6 @@ projection sur la tengente du câble :
 \end{figure}
 
 
-\subsection{Résultats et Validation du modèle}
-
-
-Grâce au code python disponible en annexe, nous avons obtenus ces résulats:
-
-Layback (à 4 nœuds): 39.97 m
-Profondeur (à 4 nœuds): 26.82 m
-
-Si les ordres de grandeurs semblent être respectés, on constate tout de même une différences de plusieurs mêtres,
-allant jusqu'à près de 20\% dans les cas les plus critiques.
-De tel écart pouvent sembler être mineur mais sont en réalité important lorsqu'on parle de récif dans un port par exemple.
-
-On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
-\begin{itemize}
-  \item Constantes d'entrée différentes et incertitude
-  \item Calculs de trainées plus possibles
-\end{itemize}
 
 
 \section{Estimation de la position du sonar}
@@ -541,29 +530,7 @@ On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
     \end{tikzpicture}
 \end{figure}
 
-Une fois la valeur du \textit{layback} estimée, on peut calculer la position réelle du sonar tracté. Cela permet
-d’associer précisément les données acoustiques enregistrées par le sonar aux bonnes coordonnées géographiques, ce qui
-est essentiel pour produire des cartes fiables et interprétables.
 
-Pour effectuer cette estimation, plusieurs données de navigation du navire et les caractéristiques du câble sont
-nécessaires, notamment :
-
-\begin{itemize}
-  \item Le \textbf{cap du navire} (ou direction), noté $\theta$ (en radians ou degrés, à convertir selon le contexte)
-  \item Les \textbf{coordonnées du navire} à l’instant considéré, notées $x_{\text{navire}}$ et $y_{\text{navire}}$
-  (en système cartésien ou géographique)
-  \item La \textbf{valeur du layback}, notée $L$, qui représente la distance entre le sonar et le point de remorquage à
-  la poupe du navire, selon la modélisation du câble
-\end{itemize}
-
-En supposant une ligne droite entre le navire et le sonar (modèle simplifié), les \textbf{coordonnées du sonar} peuvent
-être estimées par les équations suivantes :
-
-
-\begin{align*}
-    x_{\text{sonar}} &= x_{\text{navire}} - L \cdot \cos(\theta) \\
-    y_{\text{sonar}} &= y_{\text{navire}} - L \cdot \sin(\theta)
-\end{align*}
 
 
 Une fois la valeur du \textit{layback} estimée, on peut calculer la position réelle du sonar tracté. Cela permet d’associer précisément les données acoustiques enregistrées par le sonar aux bonnes coordonnées géographiques, ce qui est essentiel pour produire des cartes fiables et interprétables.
@@ -585,19 +552,11 @@ y_{\text{sonar}} &= y_{\text{navire}} - L \cdot \sin(\theta)
 
 
 Ce calcul permet de \textbf{géoréférencer correctement les données sonar}, ce qui est fondamental pour toute analyse bathymétrique, cartographique ou d'imagerie sous-marine.
+
 %----------------------------------------
 % Choix de conception
 %----------------------------------------
-
-
-\section{Choix techniques et conception}
-
-\subsection{Architecture retenue}
-\subsection{Choix des composants}
-\subsection{Calculs associés}
-
-
-
+\newpage
 %----------------------------------------
 % Simulation et validation
 %----------------------------------------
@@ -605,9 +564,74 @@ Ce calcul permet de \textbf{géoréférencer correctement les données sonar}, c
 
 \section{Simulation et validation}
 
-\subsection{Hypothèses de simulation}
-\subsection{Résultats obtenus}
+\subsection{Résultats et Validation du modèle}
+
+
+Grâce au code python disponible en annexe, nous avons obtenus ces résulats:
+
+Layback (à 4 nœuds): 39.97 m
+Profondeur (à 4 nœuds): 26.82 m
+
+Si les ordres de grandeurs semblent être respectés, on constate tout de même une différences de plusieurs mêtres,
+allant jusqu'à près de 20\% dans les cas les plus critiques.
+De tel écart pouvent sembler être mineur mais sont en réalité important lorsqu'on parle de récif dans un port par exemple.
+
+On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
+\begin{itemize}
+  \item Constantes d'entrée différentes et incertitude
+  \item Calculs de trainées plus possibles
+\end{itemize}
+
 \subsection{Analyse critique}
+
+
+%--------------------------------
+% Support de treuil
+%--------------------------------
+
+\chapter{Conception d'un support de treuil de mise à la mer}
+
+\section{Contexte}
+\subsection{Contexte}
+Dans le cadre de ce projet, il est proposé de concevoir un support pour un treuil motorisé destiné à la mise à l’eau d’un sonar tracté. Cette demande provient d’enseignants-chercheurs de l’ENSTA Bretagne, investis dans des recherches hydrographiques, notamment sur la localisation de l’épave de la nef \textit{La Cordelière}, coulée en 1512 au large de Brest. Ce treuil serait intégré au nouveau navire hydrographique de l’école, \textit{La Mélité}, inauguré en 2023.
+
+Actuellement, la mise à l’eau du sonar DeepEye s’effectue de manière entièrement manuelle. Afin d’automatiser cette opération, l’objectif est de concevoir un support capable d’accueillir un treuil motorisé permettant de réguler la longueur du câble déroulé. À plus long terme, ce système pourrait être automatisé pour adapter la profondeur du sonar en fonction de la bathymétrie rencontrée.
+
+Le support devra respecter plusieurs contraintes techniques, telles que la compatibilité avec les platines latérales de fixation du navire, la non-interférence avec les éléments déjà présents à bord, et la capacité à résister à des tensions allant jusqu’à 2000~N dans le câble. Une attention particulière sera également portée à la géométrie, aux matériaux, à l’ergonomie d’usage et à l’intégration d’un éventuel système de trancannage.
+\subsection{Expression succincte du besoin}
+\begin{itemize}
+  \item Description de l’état actuel (touret manuel)
+  \item Objectif à court terme : touret motorisé
+  \item Objectif à long terme : adaptation automatique à la bathymétrie
+  \item Contraintes spécifiques : charge, fixation, intégrité du câble, encombrement
+\end{itemize}
+
+\section{Choix techniques et conception}
+
+\subsection{Architecture retenue}
+\begin{itemize}
+  \item Présentation des options retenues
+  \item Critères de choix : encombrement, accessibilité, sécurité
+  \item Vue d’ensemble de la solution choisie
+\end{itemize}
+\subsection{Choix des composants}
+\begin{itemize}
+  \item Matériaux envisagés (acier, aluminium, etc.)
+  \item Critères de sélection : résistance, masse, coût, corrosion
+\end{itemize}
+\subsection{Calculs associés}
+\begin{itemize}
+  \item Calculs de résistance (charges, efforts, déformations)
+  \item Outils utilisés (analytique, logiciel RDM Le Mans)
+\end{itemize}
+\subsection{Maquette numérique}
+\begin{itemize}
+  \item Présentation de la CAO réalisée sous Catia V5
+\end{itemize}
+
+
+
+
 
 
 %----------------------------------------
