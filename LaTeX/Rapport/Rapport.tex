@@ -392,7 +392,7 @@ Les forces appliquées sur le système (le sonar) sont les suivantes :
   \item La force exercée par le câble sur le sonar.
 \end{itemize}
 
-L’ensemble de ces forces est pris en compte dans l’analyse dynamique pour déterminer l’orientation initiale du câble 
+L’ensemble de ces forces est pris en compte dans l’analyse dynamique pour déterminer l’orientation initiale du câble
 ainsi que le comportement du système tracté.
 
 On en déduit l'équation suivante issue du principe fondamental de la statique
@@ -541,29 +541,7 @@ On peut alors supposer plusieurs sources d'erreurs ou d'écarts:
     \end{tikzpicture}
 \end{figure}
 
-Une fois la valeur du \textit{layback} estimée, on peut calculer la position réelle du sonar tracté. Cela permet
-d’associer précisément les données acoustiques enregistrées par le sonar aux bonnes coordonnées géographiques, ce qui
-est essentiel pour produire des cartes fiables et interprétables.
 
-Pour effectuer cette estimation, plusieurs données de navigation du navire et les caractéristiques du câble sont
-nécessaires, notamment :
-
-\begin{itemize}
-  \item Le \textbf{cap du navire} (ou direction), noté $\theta$ (en radians ou degrés, à convertir selon le contexte)
-  \item Les \textbf{coordonnées du navire} à l’instant considéré, notées $x_{\text{navire}}$ et $y_{\text{navire}}$
-  (en système cartésien ou géographique)
-  \item La \textbf{valeur du layback}, notée $L$, qui représente la distance entre le sonar et le point de remorquage à
-  la poupe du navire, selon la modélisation du câble
-\end{itemize}
-
-En supposant une ligne droite entre le navire et le sonar (modèle simplifié), les \textbf{coordonnées du sonar} peuvent
-être estimées par les équations suivantes :
-
-
-\begin{align*}
-    x_{\text{sonar}} &= x_{\text{navire}} - L \cdot \cos(\theta) \\
-    y_{\text{sonar}} &= y_{\text{navire}} - L \cdot \sin(\theta)
-\end{align*}
 
 
 Une fois la valeur du \textit{layback} estimée, on peut calculer la position réelle du sonar tracté. Cela permet d’associer précisément les données acoustiques enregistrées par le sonar aux bonnes coordonnées géographiques, ce qui est essentiel pour produire des cartes fiables et interprétables.
@@ -585,9 +563,11 @@ y_{\text{sonar}} &= y_{\text{navire}} - L \cdot \sin(\theta)
 
 
 Ce calcul permet de \textbf{géoréférencer correctement les données sonar}, ce qui est fondamental pour toute analyse bathymétrique, cartographique ou d'imagerie sous-marine.
+
 %----------------------------------------
 % Choix de conception
 %----------------------------------------
+\newpage
 
 
 \section{Choix techniques et conception}
@@ -646,4 +626,3 @@ Titre ou site, consulté le jj/mm/aaaa.
 \end{thebibliography}
 
 \end{document}
-
